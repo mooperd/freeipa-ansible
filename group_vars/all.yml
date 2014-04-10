@@ -1,0 +1,58 @@
+---
+#==============================================================================+
+# Description : Variable file containing all common vars for a freeIPA install
+#
+# Website     : https://github.com/fubralimited/ansible-catn-freeipa
+#
+# (c) Copyright:
+#               Fubra Limited
+#               Manor Coach House
+#               Church Hill
+#               Aldershot
+#               Hampshire
+#               GU12 4RQ
+#               UK
+#               http://www.fubra.com
+#               support@fubra.com
+#
+# License:
+#    Copyright (C) 2012-2013 Fubra Limited
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+#==============================================================================+
+#server FreeIPA variables
+freeipaserver_ip: 192.168.0.211
+hostname: freeipa01.thunderspaff.com
+domain_search: thunderspaff.com
+nameserver_ip: 8.8.8.8
+gateway_ip: 192.168.0.1
+server_password: x7deix7dei
+realm: THUNDERSPAFF.COM
+directory_manager_password: x7deix7dei
+
+#client FreeIPA variables
+client_hostname: freeipa-client
+#client connection
+principal_user: admin
+principal_password: secretPass
+
+
+#client /etc/sudo-ldap.conf variables
+dc1: freeipa
+dc0: lab
+tls_cacertfile_path: /etc/ipa/ca.crt
+uri_LDAP: ldaps://pabloserver.freeipa.lab
+#uri_LDAP: ldapi://%2fvar%2frun%2fslapd-FREEIPA-LAB.socket
+#regarding to usi_LDAP, I am not sure which one I should choose. 
