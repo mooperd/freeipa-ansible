@@ -33,5 +33,11 @@
 #
 #==============================================================================+
 
-- name: Setup FreeIPA server
-  command: ipa-server-install -r {{ realm }} -a {{ server_password }} -P {{ server_password }} -p {{ server_password }} -U --setup-dns --no-forwarders
+#- name: Setup FreeIPA server
+#  command: ipa-server-install -r {{ realm }} -a {{ server_password }} -P {{ server_password }} -p {{ server_password }} -U --setup-dns --no-forwarders
+
+#- name: Prepare replication relationship
+#  command: ipa-replica-prepare {{ replica }} --ip-address {{ replica_ip }} -p {{ server_password }}
+
+- name: Snag the replication relationship file
+  fetch: src=/var/lib/ipa/replica-info-freeipa02.thunderspaff.com.gpg dest=/tmp/

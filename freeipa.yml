@@ -43,6 +43,11 @@
   roles:
     - server
 
+- hosts: replica
+  user: root
+  roles:
+    - replica
+
 - hosts: clients
   user: root
   roles:
