@@ -34,3 +34,5 @@
 - name: Pull file from ansible server
   copy: src={{ '/tmp/' + freeipaserver_ip  + '/var/lib/ipa/replica-info-' + ansible_fqdn + '.gpg' }} dest={{ '/var/lib/ipa/replica-info-' + ansible_fqdn + '.gpg' }}
 
+- name: Setup FreeIPA server
+  command: ipa-replica-install {{ '/var/lib/ipa/replica-info-' + ansible_fqdn + '.gpg' }} -p {{ server_password }} -w {{ server_password }} -U --setup-dns --no-forwarders --setup-ca

@@ -34,22 +34,21 @@
 #==============================================================================+
 #server FreeIPA variables
 freeipaserver_ip: 192.168.0.212
-hostname: freeipa01.thunderspaff.com
-domain_search: thunderspaff.com
+freeipaserver_hostname: freeipa01.thunderspaff.com
+freeipareplica_ip: 192.168.0.213
+freeipareplica_hostname: freeipa02.thunderspaff.com
+domain: thunderspaff.com
 nameserver_ip: 8.8.8.8
 gateway_ip: 192.168.0.1
 server_password: x7deix7dei
 realm: THUNDERSPAFF.COM
 directory_manager_password: x7deix7dei
-replica: freeipa02.thunderspaff.com 
-replica_ip: 192.168.0.213
-
 
 #client FreeIPA variables
-client_hostname: freeipa-client
+#client_hostname: freeipa-client
 #client connection
-principal_user: admin
-principal_password: secretPass
+#principal_user: admin
+#principal_password: secretPass
 
 
 #client /etc/sudo-ldap.conf variables
