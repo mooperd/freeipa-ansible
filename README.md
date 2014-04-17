@@ -33,7 +33,6 @@ All the vars to edit are in /group_vars/all.yml
 HOW TO USE:
 -----------
 Edit /group_vars/all.yml with your desired configuration. 
-Edit /hosts with THE SAME ip address than the previous configuration file. 
 
 
 TO DO:
@@ -43,15 +42,9 @@ TO DO:
 ASSUMPTIONS:
 ------------
 -Network layer properly configured (eth0).
--Kerberos server installed and configured. 
--Other layers firewalls configured to allow al least HTTP/S, DNS, NTP,  Kerberos, LDAP/S and DOGTAG.
--Ssh connection to hosts. 
 
 =======
 
 CURRENT PROBLEM:
 ------------
--To skip a ca.cert problem I copied the cert to the client (based on this solution: https://fedorahosted.org/freeipa/ticket/3457 ). This problem will be fixed or the copy will be performed in the playbook. 
--It seems the problem is the DNS. But also could be another problem regarding to the previous problem. 
--I leave the client log to show what happens.
 
