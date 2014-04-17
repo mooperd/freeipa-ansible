@@ -27,7 +27,7 @@ See LICENSE.TXT file for more information.
 
 DESCRIPTION:
 ------------
-This playbook installs a FreeIPA Server in a node. 
+This playbook installs a FreeIPA Server and configures a replica. The Playbook assumes 2 minimal centos hosts with ssh keys configured to the root user. 
 All the vars to edit are in /group_vars/all.yml
 
 HOW TO USE:
